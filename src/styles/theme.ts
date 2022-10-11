@@ -76,6 +76,33 @@ export const theme: ITheme = {
       caption: {
         default: '1.4rem',
       }
+    },
+    letterSpacing: {
+      display: {
+        large: '-0.02em',
+        medium: '-0.01em',
+      },
+      headline: {
+        large: '-0.01em',
+        medium: '-0.005em',
+        small: '-0.003em',
+      },
+      body: {
+        large: '-0.003em',
+        medium: '-0.001em',
+        small: '0em',
+      },
+      label: {
+        default: '0.001em',
+      },
+      caption: {
+        default: '0.005em',
+      }
+    }
+  },
+  utility: {
+    curves: {
+      sine: 'cubic-bezier(0.45, 0.05, 0.55, 0.95)',
     }
   }
 }

@@ -56,6 +56,29 @@ export interface ThemeTypography {
       default: string;
     };
   }
+  letterSpacing: {
+    display: {
+      large: string;
+      medium: string;
+      small?: string;
+    }
+    headline: {
+      large: string;
+      medium: string;
+      small?: string;
+    }
+    body: {
+      large: string;
+      medium: string;
+      small?: string;
+    }
+    label: {
+      default: string;
+    }
+    caption: {
+      default: string;
+    }
+  }
 }
 
 export interface ITheme {
@@ -70,4 +93,9 @@ export interface ITheme {
     };
   }
   typography: ThemeTypography;
+  utility: {
+    curves: {
+      [key: string]: string;
+    }
+  }
 }

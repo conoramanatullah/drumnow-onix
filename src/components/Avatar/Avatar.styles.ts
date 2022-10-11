@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import { ITheme } from '../Theme';
 
 import {AvatarSize} from './Avatar.types';
 
@@ -7,15 +8,15 @@ const getAvatarSize = (size: AvatarSize): string => {
     case 'small':
       return '24px';
     case 'medium':
-      return '48px';
+      return '4rem';
     case 'large':
-      return '96px';
+      return '6rem';
     default:
-      return '48px';
+      return '4rem';
   }
 };
 
-export const Avatar = styled.div<{size?: AvatarSize}>`
+export const Avatar = styled.div<{size?: AvatarSize, theme: ITheme}>`
   width: ${({size}) => {
     return getAvatarSize(size || 'small');
   }};
@@ -28,13 +29,13 @@ export const Avatar = styled.div<{size?: AvatarSize}>`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: #FFFFFF;
   overflow: hidden;
 `;
 
-export const AvatarImage = styled.img<{loaded?: boolean}>`
+export const AvatarImage = styled.img<{theme: ITheme, loaded?: boolean }>`
   width: 100%;
   opacity: ${({loaded}) => (loaded ? 1 : 0)};
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ${theme.utility.curves['sine']};
   pointer-events: none;
 `;

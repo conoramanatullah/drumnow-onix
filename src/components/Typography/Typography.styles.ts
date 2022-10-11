@@ -21,12 +21,11 @@ export const Typography = styled.div<{
   margin: 0;
   padding: 0;
 
-  letter-spacing: -0.02em;
-
   font-size: ${(props) =>
     props.theme.typography.sizes[props.displayType][props.size]};
   font-weight: ${(props) => props.theme.typography.weights[props.weight]};
   line-height: ${(props) => props.theme.typography.lineHeight[props.displayType][props.size]};
+  letter-spacing: ${(props) => props.theme.typography.letterSpacing[props.displayType][props.size]};
 `;
 
 Typography.defaultProps = {

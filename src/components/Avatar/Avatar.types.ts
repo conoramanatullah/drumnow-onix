@@ -9,7 +9,7 @@ export interface IAvatarProps {
   /**
    * Image Source
    */
-  src: string;
+  src?: string;
 
   /**
    * Avatar Size
