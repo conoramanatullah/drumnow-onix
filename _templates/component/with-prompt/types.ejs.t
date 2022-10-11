@@ -1,0 +1,4 @@
+---
+to: src/components/<%= name %>/<%= name %>.types.ts
+---
+export interface I<%= name %>Props {} 
