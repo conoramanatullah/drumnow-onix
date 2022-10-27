@@ -81,17 +81,26 @@ export interface ThemeTypography {
   }
 }
 
+export interface ThemeColorList {
+  [key: string]: string;
+}
+
+export interface ThemeGradientList {
+  [key: string]: string;
+}
+
+export interface ThemeColors {
+  primary: string;
+  secondary: string;
+  gradients: ThemeGradientList;
+  grays: ThemeColorList;
+  error: ThemeColorList;
+  success: ThemeColorList;
+  warning: ThemeColorList;
+}
+
 export interface ITheme {
-  colors: {
-    primary: string;
-    secondary: string;
-    grays: {
-      [key: string]: string;
-    };
-    error: {
-      [key: string]: string;
-    };
-  }
+  colors: ThemeColors;
   typography: ThemeTypography;
   utility: {
     curves: {

@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import { theme } from '../../styles';
 import { ITheme } from '../Theme';
 
 import {AvatarSize} from './Avatar.types';
@@ -39,3 +40,7 @@ export const AvatarImage = styled.img<{theme: ITheme, loaded?: boolean }>`
   transition: opacity 0.3s ${theme.utility.curves['sine']};
   pointer-events: none;
 `;
+
+Avatar.defaultProps = {
+  theme: theme
+};
