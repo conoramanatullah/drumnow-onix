@@ -1,4 +1,6 @@
 export * from './Avatar';
+export * from './ContextMenuItem';
+export * from './ContextMenu';
 export * from './Nav';
 export * from './NavItem';
 export * from './Toast';
